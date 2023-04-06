@@ -17,3 +17,6 @@ def getResponse(request, user_message):
         temperature=0.5,
     )
     return JsonResponse({"response":response["choices"][0]["text"]})
+
+def home(request):
+    return render(request, "page1.html")
