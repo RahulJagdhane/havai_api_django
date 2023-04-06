@@ -4,7 +4,7 @@ from django.http import HttpResponse,JsonResponse
 
 import openai
 
-openai.api_key="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"
+openai.api_key="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"
 
 # Create your views here.
 def getResponse(request, user_message):
