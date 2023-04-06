@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-12h47w^9!a0j!&we48$ak*@r2w*b1^hhw2i$+c@zpur)-)rca(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['havai.up.railway.app']
+ALLOWED_HOSTS = ['havai.up.railway.app','*']
 
 
 # Application definition
