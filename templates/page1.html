@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
       body {
-        background-image: url("bg.jpg");
+        background-image: url("{% static 'images/bg.jpg' %}");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -204,6 +205,8 @@
           <div class="card password-card">
             <div class="card-header">Medical History</div>
             <div class="card-body">
+              <iframe height="450px" width="950px" src="{% static 'media/report.pdf' %}" frameborder="3"></iframe>
+              <iframe height="450px" width="950px" src="{% static 'media/data.pdf' %}" frameborder="3"></iframe>
               <input type="password" id="password-input" class="form-control" />
               <button type="button" id="password-button" class="btn btn-primary mt-3">View</button>
             </div>
@@ -216,16 +219,12 @@
     const passwordInput = document.querySelector('#password-input');
     const passwordButton = document.querySelector('#password-button');
     
-    // select the medical history card element
     const medicalHistoryCard = document.querySelector('.medical-history-card');
     const passwordcard=document.querySelector('.password-card')
-    // add event listener to password button
     passwordButton.addEventListener('click', function() {
       const password = passwordInput.value;
       
-      // check if password is correct
       if (password === 'llll') {
-        // if password is correct, show the medical history card
         medicalHistoryCard.style.display = 'block';
         passwordcard.style.display='none';
       }
